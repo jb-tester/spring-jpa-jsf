@@ -13,7 +13,7 @@ public class Tab1 {
     private String title;
     private Integer price;
     private Integer amount;
-
+    private boolean available;
     @Id
     @Column(name = "id")
     public Integer getId() {
@@ -52,6 +52,14 @@ public class Tab1 {
 
     public void setAmount(Integer amount) {
         this.amount = amount;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
     @Override

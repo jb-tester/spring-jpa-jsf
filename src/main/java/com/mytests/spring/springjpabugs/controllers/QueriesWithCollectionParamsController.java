@@ -60,4 +60,15 @@ public class QueriesWithCollectionParamsController {
         }
         return rez.toString();
     }
+    @GetMapping("/scope/value")
+    public String testValue(){
+        StringBuilder rez= new StringBuilder();
+        Integer i1 = 50;
+        Integer i2 = 100;
+        List<Tab1> tabs = tab1Repo.findByPrice(i2);
+        for (Tab1 tab : tabs) {
+            rez.append(", ").append(tab.getTitle());
+        }
+        return rez.toString();
+    }
 }
