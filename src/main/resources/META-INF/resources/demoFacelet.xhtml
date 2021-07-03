@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:body>
+        <p>the fruits with high price</p>
+        <ul>
+            <ui:repeat value="#{myController.tab1Repo.titleByPrice}" var="tab1">
+                <li>
+                    <p>#{tab1.name}</p>
+                </li>
+            </ui:repeat>
+        </ul>
+        <p>the rare ones</p>
+        <ul>
+            <ui:repeat value="#{myController.tab1Repo.titleByAmount}" var="fruit">
+                <li>
+                    <p>#{fruit.title}</p>    
+                </li>
+            </ui:repeat>
+        </ul>
+    </h:body>
+</html>
